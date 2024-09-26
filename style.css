@@ -59,10 +59,10 @@ p{
     color: #fff;
     padding: 8px 30px;
     border-radius: 30px;
-    transition background: 05s;
+    transition background: 0.5s;
 }
 .btn:hover {
-    background: radial-gradient(#ad75f2,#081c9f);
+    background: radial-gradient(#ad75f2,#109f08);
 }
 /* Login Form */
 .form{
@@ -129,7 +129,8 @@ p{
     margin-left: 40px;
 }
 .header{
-    background: radial-gradient(#fff,#455cd1);
+    background: radial-gradient(#fff,
+    #455cd1);
 }
 .header .row{
     margin-top: 70px;
@@ -151,3 +152,114 @@ p{
     padding-left: 25px;
     padding-right: 25px;
 }
+.col-5{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-5 img{
+    width: 100%;
+}
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: '';
+    background: #ff523d;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.h5{
+    color: #555;
+    font-weight: normal;
+}
+.col-5 p{
+    font-size: 14px;
+}
+.ratting .fa{
+    color: #ff523d;
+}
+.col-5:hover{
+    transform:translateY(-5px);
+}
+.img-container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-color: #455cd1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.animation-button {
+    background-color: #ad75f2;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-shadow:0 4px 15px 0 #006699;
+    width: 350px;
+    animation: example 1s infinite;
+}
+@keyframes example {
+    0% {background-color: #008CBA;}
+    50% {background-color: #006699;}
+    100%{background-color: #008CBA;}
+}
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Add animation class */
+  .animate-pulse {
+    animation: pulse 0.5s;
+  }
+  .animate-bounce {
+    animation: bounce 0.5s;
+  }  
